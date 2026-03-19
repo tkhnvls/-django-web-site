@@ -9,18 +9,18 @@ def education(request):
     # ТЗ: Данные получать из словарей, которые внедрены в исходный код
     context = {
         'me': {
-            'name': 'Иванов Иван Иванович', 'email': 'ivan@student.ru', 
-            'phone': '+7 (999) 000-11-22', 'photo': 'assets/images/me.jpg'
+            'name': 'Тихонов Елизавета Витальевна', 'email': 'elvitikhonov@edu.hse.ru', 
+            'phone': '+79632985909', 'photo': 'assets/images/me.jpg'
         },
         'program': {
-            'title': 'Веб-разработка и программная инженерия',
-            'desc': 'Программа подготовки специалистов по современным веб-технологиям и проектированию архитектуры.',
-            'director': {'name': 'Петров П.П.', 'email': 'petrov@university.ru', 'photo': 'assets/images/dir.jpg'},
-            'manager': {'name': 'Сидорова С.С.', 'email': 'sidorova@university.ru', 'photo': 'assets/images/man.jpg'}
+            'title': 'Реклама и связи с общественностью',
+            'desc': 'Программа готовит универсальных специалистов по коммуникациям за счёт интеграции дисциплин.',
+            'director': {'name': 'Каткова С.В.', 'email': 'skatkova@hse.ru', 'photo': 'assets/images/dir.jpg'},
+            'manager': {'name': 'Санакова Т.Ю.', 'email': 'tsanakova@hse.ru', 'photo': 'assets/images/man.jpg'}
         },
         'classmates': [
-            {'name': 'Смирнов Алексей', 'email': 'alex@student.ru', 'phone': '+7 (900) 111-22-33', 'photo': 'assets/images/c1.jpg'},
-            {'name': 'Кузнецова Мария', 'email': 'maria@student.ru', 'phone': '+7 (900) 444-55-66', 'photo': 'assets/images/c2.jpg'}
+            {'name': 'Германова Мария', 'email': 'magermanova@edu.hse.ru', 'phone': '+7 (967) 471-49-69', 'photo': 'assets/images/c1.jpg'},
+            {'name': 'Шаповалова Елизавета', 'email': 'ershapovalova@edu.hse.ru', 'phone': '+7 (926) 121-03-33', 'photo': 'assets/images/c2.jpg'}
         ]
     }
     return render(request, 'core/education.html', context)
