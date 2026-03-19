@@ -77,13 +77,15 @@ def task_1018(request):
 
                 items = line.split(', ')
                 available = []
+                total_cost = 0 
 
                 for item in items:
                     name, price = item.split(': ')
                     price = int(price)
 
-                    if price <= budget:
+                    if total_cost + price <= budget:
                         available.append(name)
+                        total_cost += price 
 
                 available.sort()
                 shop_result = " ".join(available)
