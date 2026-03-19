@@ -10,17 +10,17 @@ def education(request):
     context = {
         'me': {
             'name': 'Тихонов Елизавета Витальевна', 'email': 'elvitikhonov@edu.hse.ru', 
-            'phone': '+79632985909', 'photo': 'assets/images/me.jpg'
+            'phone': '+79632985909', 'photo': 'assets/images/IMG_7597.jpg'
         },
         'program': {
             'title': 'Реклама и связи с общественностью',
             'desc': 'Программа готовит универсальных специалистов по коммуникациям за счёт интеграции дисциплин.',
-            'director': {'name': 'Каткова С.В.', 'email': 'skatkova@hse.ru', 'photo': 'assets/images/dir.jpg'},
-            'manager': {'name': 'Санакова Т.Ю.', 'email': 'tsanakova@hse.ru', 'photo': 'assets/images/man.jpg'}
+            'director': {'name': 'Каткова С.В.', 'email': 'skatkova@hse.ru', 'photo': 'assets/images/IMG_4792.PNG'},
+            'manager': {'name': 'Санакова Т.Ю.', 'email': 'tsanakova@hse.ru', 'photo': 'assets/images/IMG_4790.JPG'}
         },
         'classmates': [
-            {'name': 'Германова Мария', 'email': 'magermanova@edu.hse.ru', 'phone': '+7 (967) 471-49-69', 'photo': 'assets/images/c1.jpg'},
-            {'name': 'Шаповалова Елизавета', 'email': 'ershapovalova@edu.hse.ru', 'phone': '+7 (926) 121-03-33', 'photo': 'assets/images/c2.jpg'}
+            {'name': 'Германова Мария', 'email': 'magermanova@edu.hse.ru', 'phone': '+7 (967) 471-49-69', 'photo': 'assets/images/IMG_4817.PNG'},
+            {'name': 'Шаповалова Елизавета', 'email': 'ershapovalova@edu.hse.ru', 'phone': '+7 (926) 121-03-33', 'photo': 'assets/images/IMG_4816.PNG'}
         ]
     }
     return render(request, 'core/education.html', context)
