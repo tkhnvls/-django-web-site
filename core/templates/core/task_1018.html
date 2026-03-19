@@ -1,8 +1,38 @@
 {% extends 'core/base.html' %}
 {% block content %}
-<h1>Задача 1018</h1>
-<form method="post">{% csrf_token %}<label>Год:</label>
-<input type="number" name="year" required><button type="submit">Узнать</button></form>
-{% if result %}<h3>Для {{ result.y }} года:</h3>
-<p>Високосный: {{ result.leap }}</p><p>Век: {{ result.c }}</p>{% endif %}
+<h1>Задачи</h1>
+<!ЗАДАЧА 1018>
+<h2>Задача 1018</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Введите год:</label><br>
+    <input type="number" name="year" required>
+    <button type="submit">Узнать</button>
+</form>
+
+{% if result %}
+    <h3>Для {{ result.y }} года:</h3>
+    <p>Високосный: {{ result.leap }}</p>
+    <p>Век: {{ result.c }}</p>
+{% endif %}
+
+<hr>
+
+<!ЗАДАЧА 8>
+<h2>Задача 8 (Покупки)</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Введите список товаров:</label><br>
+    <input type="text" name="products" placeholder="хлеб: 200, молоко: 150" style="width: 400px;" required>
+    <br><br>
+    <button type="submit">Проверить</button>
+</form>
+
+{% if shop_result %}
+    <h3>Можно купить:</h3>
+    <p>{{ shop_result }}</p>
+{% endif %}
+
 {% endblock %}
