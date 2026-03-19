@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Project</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=3">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo.png' %}" alt="Logo" width="40"></a>
+        <a href="{% url 'home' %}">Главная</a>
+        <a href="{% url 'about' %}">О нас</a>
+        <a href="{% url 'gallery' %}">Галерея</a>
+        <a href="{% url 'education' %}">Обучение</a>
+        <a href="{% url 'contacts' %}">Контакты</a>
+        <a href="{% url 'task_1018' %}">Задача 1018</a>
+        <a href="{% url 'about' %}#section2" style="color: #fbbf24;">Сразу к Разделу 2</a>
+        <a href="https://github.com/vmarshirov/WebApplicationsDevelopment" target="_blank">GitHub курса</a>
+    </nav>
+    <main class="card">
+        {% block content %}{% endblock %}
+    </main>
+    <footer id="footer">
+        <p>&copy; 2026 Django Учеба</p>
+    </footer>
+</body>
+</html>

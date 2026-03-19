@@ -1,0 +1,8 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h1>Задача 1018</h1>
+<form method="post">{% csrf_token %}<label>Год:</label>
+<input type="number" name="year" required><button type="submit">Узнать</button></form>
+{% if result %}<h3>Для {{ result.y }} года:</h3>
+<p>Високосный: {{ result.leap }}</p><p>Век: {{ result.c }}</p>{% endif %}
+{% endblock %}

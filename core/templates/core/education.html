@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Я и моя образовательная программа</h1>
+
+<div class="card" style="background: #f0fdf4;">
+    <h2>Я</h2>
+    <img src="{% static me.photo %}" alt="Мое фото" width="100" style="border-radius: 8px;">
+    <p><strong>ФИО:</strong> {{ me.name }}</p>
+    <p><strong>Email:</strong> {{ me.email }} | <strong>Телефон:</strong> {{ me.phone }}</p>
+</div>
+
+<div class="card">
+    <h2>Программа: {{ program.title }}</h2>
+    <p>{{ program.desc }}</p>
+    
+    <h3>Руководство</h3>
+    <ul>
+        <li>
+            <strong>Руководитель:</strong> {{ program.director.name }} ({{ program.director.email }})<br>
+            <img src="{% static program.director.photo %}" alt="Фото руководителя" width="80">
+        </li>
+        <li style="margin-top: 15px;">
+            <strong>Менеджер:</strong> {{ program.manager.name }} ({{ program.manager.email }})<br>
+            <img src="{% static program.manager.photo %}" alt="Фото менеджера" width="80">
+        </li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Мои сокурсники</h2>
+    <ol>
+        {% for mate in classmates %}
+        <li style="margin-bottom: 20px;">
+            <strong>{{ mate.name }}</strong><br>
+            Email: {{ mate.email }} | Телефон: {{ mate.phone }}<br>
+            <img src="{% static mate.photo %}" alt="Фото сокурсника" width="80">
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}

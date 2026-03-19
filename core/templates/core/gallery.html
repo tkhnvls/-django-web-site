@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Объекты и результаты анализа</h1>
+<p>В данном разделе представлены примеры входных данных и результаты работы алгоритмов машинного зрения.</p>
+
+<div style="display: flex; flex-direction: column; gap: 30px; margin-top: 20px;">
+    
+    <figure class="card" style="margin: 0; display: flex; gap: 20px; align-items: center;">
+        <div style="flex: 1;">
+            <div class="img-placeholder" style="height: 200px; background: #64748b; color: white;">[Фото: Макро участок рельса]</div>
+        </div>
+        <figcaption style="flex: 1;">
+            <h3 style="margin-top: 0; color: var(--primary);">Объект мониторинга</h3>
+            <p>Стандартный участок железнодорожного полотна. Камера фиксирует болтовые соединения, подкладки и поверхность рельса. Высокая детализация (4K) критична для работы алгоритма, так как микротрещины могут быть не видны на снимках низкого разрешения.</p>
+        </figcaption>
+    </figure>
+
+    <figure class="card" style="margin: 0; display: flex; gap: 20px; align-items: center;">
+        <figcaption style="flex: 1; text-align: right;">
+            <h3 style="margin-top: 0; color: var(--accent);">Анализ машинным зрением</h3>
+            <p>Результат работы сверточной нейросети. Алгоритм обнаружил отсутствие крепежного элемента и выделил потенциальную аномалию красным маркером (bounding box). Изображение сопровождается координатами GPS для быстрой отправки ремонтной бригады.</p>
+        </figcaption>
+        <div style="flex: 1;">
+            <div class="img-placeholder" style="height: 200px; background: #334155; color: #10b981; border: 2px solid #ef4444;">[Фото: Распознанный дефект]</div>
+        </div>
+    </figure>
+
+</div>
+{% endblock %}
